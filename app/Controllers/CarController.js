@@ -30,6 +30,7 @@ export default class CarController {
 
     _carService.listCar(newCarObject)
     formData.reset()
+    // @ts-ignore
     $('#list-car-modal').modal('toggle')
     _drawCars()
   }

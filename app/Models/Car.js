@@ -11,13 +11,13 @@ export default class Car{
   getTemplate(index){
     return /*html*/ `
     <div class="col-3 border border-dark rounded">
-    <h1>Make: ${this.make}</h1>
+    <h2>Make: ${this.make}</h2>
     <h5>Model: ${this.model}</h5>
     <h5>Year: ${this.year}</h5>
     <h5>Price: $${this.price}</h5>
     <p>${this.description}</p>
     <img class="img-fluid" src="${this.imgUrl}" />
-      <button class="btn btn-danger btn-block" onclick="app.carController.delete(${index})">Remove Listing</button>
+    <button class="btn btn-danger btn-block" onclick="app.carController.delete(${index})">Remove Listing</button>
     </div>
     `
   }
