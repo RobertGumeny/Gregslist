@@ -1,10 +1,24 @@
 export default class Car{
   constructor(data){
-    this.title =  data.title
-    console.log("Car Model is linked")
+    this.make = data.make
+    this.model = data.model
+    this.year = data.year
+    this.price = data.price
+    this.description = data.description || "No description provided"
+    this.imgUrl = data.imgUrl
   }
 
-  get Template(){
-    return this.title
+  getTemplate(index){
+    return /*html*/ `
+    <div class="col-3 border border-dark rounded">
+    <h1>Make: ${this.make}</h1>
+    <h5>Model: ${this.model}</h5>
+    <h5>Year: ${this.year}</h5>
+    <h5>Price: $${this.price}</h5>
+    <p>${this.description}</p>
+    <img class="img-fluid" src="${this.imgUrl}" />
+      <button class="btn btn-danger btn-block" onclick="app.carController.delete(${index})">Remove Listing</button>
+    </div>
+    `
   }
 }
