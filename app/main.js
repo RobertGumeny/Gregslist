@@ -1,7 +1,11 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import CarController from "./Controllers/CarController.js"
+import HomeController from "./Controllers/HomeController.js"
+import JobsController from "./Controllers/JobsController.js"
 
 class App {
-  valuesController = new ValuesController();
+  carController = new CarController()
+  homeController = new HomeController()
+  jobsController = new JobsController()
 }
 
 window["app"] = new App();

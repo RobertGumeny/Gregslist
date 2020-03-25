@@ -1,9 +1,15 @@
-import Value from "./Models/Value.js";
+import Car from "./Models/Car.js";
+import Home from "./Models/Home.js";
+import Job from "./Models/Job.js";
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  values: [],
+  /** @type {Car[]} */
+  cars:[],
+  /** @type {Home[]} */
+  homes:[],
+  /** @type {Job[]} */
+  jobs:[]
 };
 
 class Store {
