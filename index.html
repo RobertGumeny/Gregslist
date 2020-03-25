@@ -148,6 +148,65 @@
 
         </div><!-- End Home Display Area-->
 
+        <div class="row text-center pb-2" id="jobs-header">
+            <div class="col-12">
+                <h3 class="py-2">Job Listings</h3>
+                <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#list-job-modal">
+                    List a Job
+                  </button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="list-job-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">List your Job</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="container-fluid" onsubmit="app.jobController.listJob(event)">
+                          <div class="form-group">
+                              <label for="title"></label>
+                              <input type="text" name="title" class="form-control" placeholder="Enter Job Title here" required>
+                          </div>
+        
+                        <div class="form-group">
+                            <label for="industry"></label>
+                            <input type="text" name="industry" class="form-control" placeholder="Enter Industry here" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="company"></label>
+                            <input type="text" name="company" class="form-control" placeholder="Enter Company Name here" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="salary"></label>
+                            <input type="number" min="0" name="salary" class="form-control" placeholder="Enter Salary here" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="jobDescription"></label>
+                            <textarea placeholder="Enter description here..." name="jobDescription" cols="30" rows="10" maxlength="250"></textarea>
+                        </div>
+
+                        <button class="btn btn-secondary btn-block" type="submit">List Job</button>
+        
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <h5>Thanks for using Greg's List!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="job-display">
+
+        </div>
       </main>
 
       <footer class="container-fluid bg-dark">
